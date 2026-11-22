@@ -1,0 +1,203 @@
+/* ==========================================================================
+   CalCalculator - Responsive Media Queries & Breakpoints
+   ========================================================================== */
+
+/* Small Devices (Tablet min-width: 640px) */
+@media (min-width: 640px) {
+  .auth-wrapper {
+    padding: 1.25rem;
+  }
+
+  .auth-shell {
+    min-height: calc(100vh - 2.5rem);
+  }
+
+  .auth-form-section {
+    padding: 2.5rem 3rem;
+  }
+
+  .app-header {
+    padding: 0 2rem;
+  }
+
+  .header-title {
+    font-size: 1.25rem;
+  }
+
+  .header-subtitle {
+    display: block;
+  }
+
+  .app-content-body {
+    padding: 2rem;
+  }
+
+  .stat-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prediction-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .risk-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-hero-card {
+    padding: 2.25rem;
+  }
+
+  .attention-card {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .hide-on-mobile {
+    display: inline !important;
+  }
+}
+
+/* Medium / Large Devices (Desktop min-width: 1024px) */
+@media (min-width: 1024px) {
+  .auth-shell {
+    grid-template-columns: 1.08fr 0.92fr;
+  }
+
+  .auth-hero {
+    display: flex;
+  }
+
+  .auth-mobile-header {
+    display: none;
+  }
+
+  .auth-form-section {
+    padding: 2.5rem 4rem;
+  }
+
+  .app-container {
+    display: grid;
+    grid-template-columns: 272px 1fr;
+  }
+
+  .sidebar-backdrop {
+    display: none !important;
+  }
+
+  .app-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    transform: translateX(0);
+    box-shadow: none;
+  }
+
+  .sidebar-close-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .app-header {
+    padding: 0 2.5rem;
+  }
+
+  .app-content-body {
+    padding: 2.5rem;
+  }
+}
+
+/* Extra Large Devices (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .stat-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .prediction-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dashboard-lower-grid {
+    grid-template-columns: 1.35fr 0.65fr;
+  }
+
+  .subject-details-grid {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .subject-sidebar-card {
+    min-height: 670px;
+  }
+
+  .subject-tabs-container {
+    display: block;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .subject-tab-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .predictor-lower-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 0.72fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Dashboard, Study Planner and Goal Tracker breakpoints
+   ========================================================================== */
+
+@media (min-width: 640px) {
+  .hero-split { flex-direction: row; align-items: center; justify-content: space-between; }
+  .hero-gwa { align-self: center; }
+  .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-row { grid-template-columns: repeat(2, 1fr); }
+  .planner-summary, .goal-summary { grid-template-columns: repeat(4, 1fr); }
+  .planner-panel { padding: 1.75rem; }
+  .goal-hero { padding: 2rem; }
+  .toolbar { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+  .task-card { padding: 1.125rem 1.25rem 1.125rem 1rem; }
+}
+
+@media (min-width: 900px) {
+  .goal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .glance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+  .glance-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 479px) {
+  .segment { padding: 0.5rem 0.625rem; }
+  .task-card { grid-template-columns: auto 1fr; }
+  .task-actions { grid-column: 2; justify-self: end; margin-top: -0.25rem; }
+  .compare-box strong { font-size: 1.5rem; }
+  .hero-gwa { width: 100%; }
+  .form-actions > button { flex: 1; }
+  .goal-toolbar > button { flex: 1; }
+}
